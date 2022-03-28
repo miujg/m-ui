@@ -1,9 +1,9 @@
 <template>
   <!-- <element-preview /> -->
-  <!-- <row-col /> -->
-  <!-- <button-example /> -->
-  <!-- <checkbox-example /> -->
-  <!-- <form-example /> -->
+  <row-col />
+  <button-example />
+  <checkbox-example />
+  <form-example />
   <!-- <input-example /> -->
   <transfer-example />
 </template>

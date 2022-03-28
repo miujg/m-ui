@@ -11,3 +11,10 @@
     align-items: center;
   }
 }
+
+@include b(checkbox) {
+  box-sizing: border-box;
+  padding: 5px 0;
+  display: flex;
+  align-items: center;
+}

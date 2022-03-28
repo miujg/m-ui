@@ -1,5 +1,6 @@
 import { computed, getCurrentInstance, watch } from 'vue'
 import { ITransferProps, ITransferPanelProps, IPanelState } from './transfer.type'
+import { useNamespace } from '@m-ui/hooks'
 
 export const useComputedData = (props:ITransferProps) => {
   const propsKey = computed(() => props.props.key)
@@ -67,5 +68,38 @@ export const useCheck = (props:ITransferPanelProps, panelState:IPanelState) => {
     keyProp,
     disabledProp,
     handleCheckAllChange
+  }
+}
+
+
+export const usePanelClass = () => {
+  const ns = useNamespace('transfer-panel')
+  const panelClass = computed(() => ([
+    ns.b()
+  ]))
+  const headClass = computed(() => ([
+    ns.e('header')
+  ]))
+  const bodyClass = computed(() => ([
+    ns.e('body')
+  ]))
+  return {
+    panelClass,
+    headClass,
+    bodyClass
+  }
+}
+
+export const useTransferClass = () => {
+  const ns = useNamespace('transfer')
+  const boxClass = computed(() => ([
+    ns.b()
+  ]))
+  const buttonsClass = computed(() => ([
+    ns.e('buttons')
+  ]))
+  return {
+    boxClass,
+    buttonsClass
   }
 }

@@ -1,12 +1,24 @@
 <template>
-  <div class="m-transfer">
-    <m-transfer-panel :data="sourceData" :props="props" @checked-change="onSourceCheckedChange"></m-transfer-panel>
-    <div class="m-transfer__buttons">
+  <div :class="boxClass">
+    <m-transfer-panel 
+      :data="sourceData" 
+      :props="props" 
+      @checked-change="onSourceCheckedChange"
+      title="Source"
+    >
+    </m-transfer-panel>
+    <div :class="buttonsClass">
       <m-button @click="addToLeft" :disabled="rightChecked.length === 0">{{'<--'}}</m-button>
       &nbsp;
       <m-button @click="addToRight" :disabled="leftChecked.length === 0">{{'-->'}}</m-button>
     </div>
-    <m-transfer-panel :data="targetData" :props="props" @checked-change="onTargetCheckedChange"></m-transfer-panel>
+    <m-transfer-panel 
+      :data="targetData" 
+      :props="props" 
+      @checked-change="onTargetCheckedChange"
+      title="Target"
+    >
+    </m-transfer-panel>
   </div>
 </template>
 
@@ -15,7 +27,7 @@ import { defineComponent, PropType, reactive, toRefs } from 'vue'
 import MTransferPanel from './transfer-panel.vue'
 import MButton from '@m-ui/button'
 import { DataItem, Key, Props } from './transfer.type'
-import { useComputedData } from './useTransfer'
+import { useComputedData, useTransferClass } from './useTransfer'
 
 export default defineComponent({
   name: 'mTransfer',
@@ -80,7 +92,8 @@ export default defineComponent({
       onSourceCheckedChange,
       onTargetCheckedChange,
       addToLeft,
-      addToRight
+      addToRight,
+      ...useTransferClass()
     }
   },
 })
