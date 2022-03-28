@@ -1,4 +1,5 @@
 <template>
+  <h4>穿梭框基本实现</h4>
   <m-transfer v-model="rightValue" :data="transferData" :props="transferProp"></m-transfer>
 </template>
 

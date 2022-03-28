@@ -1,11 +1,11 @@
 <template>
   <!-- <element-preview /> -->
-  <row-col />
-  <button-example />
   <checkbox-example />
   <form-example />
   <!-- <input-example /> -->
   <transfer-example />
+  <button-example />
+  <row-col />
 </template>
 
 <script lang="ts">

@@ -1,4 +1,5 @@
 <template>
+  <h4>多选框</h4>
   {{checkVal}}
   <m-checkbox-group v-model="checkVal">
     <m-checkbox v-for="c in checks" :key="c" :label="c" @change="checkboxChange">
