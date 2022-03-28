@@ -8,7 +8,7 @@
       全选
     </m-checkbox>
     <div>
-      <m-checkbox-group v-model="checked">
+      <m-checkbox-group v-model="checked" direction="column">
         <m-checkbox v-for="item in data" :key="item[keyProp]" :label="item[keyProp]" :disabled="item[disabledProp]">
           {{item[labelProp]}}
         </m-checkbox>

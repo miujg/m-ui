@@ -3,5 +3,11 @@
 
 @include b(checkbox-group) {
   display: flex;
-  align-items: center;
+  @include m(column) {
+    flex-direction: column;
+  }
+  @include m(row) {
+    flex-direction: row;
+    align-items: center;
+  }
 }
