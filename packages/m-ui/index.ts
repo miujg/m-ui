@@ -30,7 +30,19 @@ const install = (app:App) => {
   })
 }
 
-// // 在使用组件库的时候，createApp().use(xxx)
+// 在使用组件库的时候，createApp().use(xxx)
 export default {
   install 
+}
+
+export {
+  Button,
+  Icon,
+  Row,
+  Col,
+  Checkbox,
+  CheckboxGroup,
+  Transfer,
+  Form,
+  FormItem
 }
