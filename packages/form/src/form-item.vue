@@ -1,12 +1,14 @@
 <template>
   <div :class="classs">
-    <label :class="labelClass" v-if="!$slots.label">{{label}}</label>
-    <label :class="labelClass" v-else>
+    <label :class="labelClass" v-if="!$slots.label" :style="labelStyle">{{label}}</label>
+    <label :class="labelClass" :style="labelStyle" v-else>
       <slot name="label" />
     </label>
-    <slot />
     <!-- <div :class="errClass" v-if="!$slots.error">{{formItemStatus.message}}</div> -->
-    <div :class="errClass" v-if="!formItemStatus.error">{{formItemStatus.message}}</div>
+    <div :class="contentClass">
+      <slot />
+      <div :class="errClass" v-if="!formItemStatus.error">{{formItemStatus.message}}</div>
+    </div>
     <!-- <div v-else :class="errClass">
       <slot name="error" />
     </div> -->
@@ -30,8 +32,14 @@ export default defineComponent({
     }
   },
   setup(props) {
-    const mform:IMForm = inject('MForm', {model: {}, rules: {}})
+    const mform:IMForm = inject('MForm', {model: {}, rules: {}, labelWidth: 'auto'})
+    const labelStyle = computed(() => {
+      return {
+        width: typeof mform.labelWidth === 'string'? mform.labelWidth : `${mform.labelWidth}px`
+      }
+    })
     return {
+      labelStyle,
       ...useFormItemClasss(),
       ...useRules(props,mform)
     }

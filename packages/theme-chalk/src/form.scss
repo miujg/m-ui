@@ -1,0 +1,26 @@
+@import './common/var.scss';
+@import './mixins/mixin.scss';
+
+@include b(form) {
+  display: flex;
+  flex-direction: column;
+  @include b(form-item) {
+    display: flex;
+    align-items: center;
+    margin-bottom: 18px;
+    @include e(label) {
+      margin-right: 10px;
+      display: flex;
+      justify-content: flex-end;
+      font-size: 14px;
+      color: #333;
+    }
+  }
+
+  @include m(label-left) {
+    .#{$namespace}-form-item__label {
+      justify-content: flex-start;
+    }
+  }
+}
+

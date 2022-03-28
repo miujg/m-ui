@@ -25,7 +25,8 @@ export interface IFormProps {
 
 export interface IMForm {
   model: Record<string, any>,
-  rules: FormRules
+  rules: FormRules,
+  labelWidth: string | number
 }
 
 // mitt 监听相关

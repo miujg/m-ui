@@ -1,6 +1,6 @@
 @import "../common/var.scss";
 
-// .z-button{}
+// b(button) ==> m-button
 @mixin b($block) {
   $B: $namespace+ '-' +$block;
   .#{$B} {
@@ -8,7 +8,7 @@
   }
 }
 
-// .z-button.is-xx
+// when(disabled) ==> is-disabled
 @mixin when($state) {
   @at-root {
     &.#{$state-prefix+$state} {
@@ -17,7 +17,7 @@
   }
 }
 
-// &--primary ==> .z-button--primary
+// m(default) ==> &--default
 @mixin m($modifier) {
   @at-root {
     #{&+$modifier-separator+$modifier} {
@@ -26,7 +26,7 @@
   }
 }
 
-// &_header ==> .z-button__header
+// m(label) ==> &__label 
 @mixin e($element) {
   @at-root {
     #{&+$element-separator+$element} {

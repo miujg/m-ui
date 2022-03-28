@@ -1,5 +1,5 @@
 <template>
-  <m-form :model="model" :rules="rules" ref="ruleFormRef">
+  <m-form :model="model" :rules="rules" ref="ruleFormRef" label-width="80px">
     <m-form-item prop="name" label="姓名">
       <input type="text" v-model="model.name" />
     </m-form-item>

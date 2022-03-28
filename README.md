@@ -29,7 +29,7 @@
 2. 打包项目css文件。执行命令： npm run build:theme
 
 ![image.png](https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/2f9e8fa129224907b76c647ca1e6385f~tplv-k3u1fbpfcp-watermark.image?)
-2. 执行命令：npm run example-dev。浏览器访问: http://localhost:8080/
+2. 执行命令：npm run demo-dev。浏览器访问: http://localhost:8080/
 3. example/index.ts里面有组件引入使用方法：
 
 ![image.png](https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/a946f085d6af43edb7bd1aacac13bfba~tplv-k3u1fbpfcp-watermark.image?)

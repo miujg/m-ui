@@ -25,15 +25,21 @@ export default defineComponent({
       type: Object as PropType<FormRules>,
       default: () => ({})
     },
+    labelWidth: {
+      type: [String, Number],
+      default: 'auto'
+    },
     labelPosition: {
       type: String as PropType<LabelPosition>,
-      default: 'right'
+      default: 'left'
     }
   },
   setup(props, ctx) {
+    console.log(props)
     provide('MForm', {
       model: props.model || {},
-      rules: props.rules || {} 
+      rules: props.rules || {},
+      labelWidth: props.labelWidth 
     })    
     const ns = useNamespace('form')
     const validataFuncs: ValidataFunc = {}

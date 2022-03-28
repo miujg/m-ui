@@ -23,10 +23,16 @@ export const useFormItemClasss = () => {
       ns.e('error')
     ]
   })
+  const contentClass = computed(() => {
+    return [
+      ns.e('content')
+    ]
+  })
   return {
     labelClass,
     classs,
-    errClass  
+    errClass,
+    contentClass  
   }
 }
 
