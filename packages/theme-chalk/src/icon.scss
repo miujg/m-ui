@@ -1,0 +1,34 @@
+@font-face {
+  font-family: "m-ui-icons"; /* Project id 2885304 */
+  src: url('./fonts/iconfont.woff?t=1647482334930') format('woff'),
+       url('./fonts/iconfont.ttf?t=1647482334930') format('truetype');
+}
+
+.m-icon-jiazai:before {
+  content: "\e7ba";
+}
+
+.m-icon-xiajiantou:before {
+  content: "\eb6d";
+}
+
+.m-icon-shangjiantou1:before {
+  content: "\eb6e";
+}
+
+.m-icon-kexuejishu:before {
+  content: "\e60f";
+}
+
+.m-icon-tongzhigonggao:before {
+  content: "\e610";
+}
+
+.m-icon-kexuejishu2:before {
+  content: "\e611";
+}
+
+.m-icon-xiazaizhongxin:before {
+  content: "\e612";
+}
+
