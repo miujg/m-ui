@@ -7,7 +7,7 @@
     <!-- <div :class="errClass" v-if="!$slots.error">{{formItemStatus.message}}</div> -->
     <div :class="contentClass">
       <slot />
-      <div :class="errClass" v-if="!formItemStatus.error">{{formItemStatus.message}}</div>
+      <div :class="errClass" v-if="!formItemStatus.passed">{{formItemStatus.message}}</div>
     </div>
     <!-- <div v-else :class="errClass">
       <slot name="error" />

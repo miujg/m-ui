@@ -8,6 +8,15 @@
     display: flex;
     align-items: center;
     margin-bottom: 18px;
+    @include e(content) {
+      position: relative;
+    }
+    @include e(error) {
+      color: $--color-danger;
+      font-size: 12px;
+      position: absolute;
+      
+    }
     @include e(label) {
       margin-right: 10px;
       display: flex;

@@ -1,0 +1,7 @@
+@import './common/var.scss';
+@import './mixins/mixin.scss';
+
+@include b(checkbox-group) {
+  display: flex;
+  align-items: center;
+}

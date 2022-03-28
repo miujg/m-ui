@@ -46,6 +46,7 @@ export default defineComponent({
       }
     ]))
     const hanleClick = (e:MouseEvent) => {
+      e.preventDefault()
       ctx.emit('click', e)
     }
     return {

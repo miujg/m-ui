@@ -31,16 +31,15 @@ export default defineComponent({
     },
     labelPosition: {
       type: String as PropType<LabelPosition>,
-      default: 'left'
+      default: 'right'
     }
   },
   setup(props, ctx) {
-    console.log(props)
-    provide('MForm', {
+    provide('MForm', reactive({
       model: props.model || {},
       rules: props.rules || {},
       labelWidth: props.labelWidth 
-    })    
+    }))    
     const ns = useNamespace('form')
     const validataFuncs: ValidataFunc = {}
     useMitt(validataFuncs)
@@ -52,7 +51,7 @@ export default defineComponent({
     })
     const validate = () => {
       Object.keys(validataFuncs).forEach((key:string) => {
-        validataFuncs[key](key)
+        validataFuncs[key]()
       })
     }
 

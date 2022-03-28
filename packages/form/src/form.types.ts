@@ -32,7 +32,7 @@ export interface IMForm {
 // mitt 监听相关
 
 export type ValidataFunc = {
-  [key: string]: (text: string) => boolean
+  [key: string]: (text?: string) => boolean
 }
 
 export type Events = {

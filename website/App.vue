@@ -1,10 +1,10 @@
 <template>
   <!-- <element-preview /> -->
   <!-- <row-col /> -->
-  <!-- <button-example /> -->
+  <button-example />
   <!-- <checkbox-example /> -->
   <form-example />
-  <input-example />
+  <!-- <input-example /> -->
   <!-- <transfer-example /> -->
 </template>
 
